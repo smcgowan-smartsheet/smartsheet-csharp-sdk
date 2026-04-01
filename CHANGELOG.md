@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Add 'Add Report Scope' and 'Remove Report Scope' endpoint support to ReportResources
 
+## [6.6.6] - 2026-03-25
+### Fixed
+- Remove redundant http client and json serializer creation. Fixes [#168](https://github.com/smartsheet/smartsheet-csharp-sdk/issues/168)
+
+### Added
+- `AssetSharingResources.ShareAsset` now uses a separate DTO (`CreateShareRequest`) for asset sharing. Fixes [#166](https://github.com/smartsheet/smartsheet-csharp-sdk/issues/166)
+
 ## [6.6.5] - 2026-02-04
 ### Fixed
 - Fix retry logic. Previously the SDK's retry logic was hindered by a generic error check and as a result the code could never reach the retry part.
